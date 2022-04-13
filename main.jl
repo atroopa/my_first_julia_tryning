@@ -22,3 +22,23 @@ function gram(x,y)
 end
 
 println(gram(4,2))
+
+function hypot(x,y)
+  x = abs(x)
+  y = abs(y)
+
+  if x > y
+    r = y/x
+    return x*sqrt(1+r*r)
+  end
+
+  if y == 0
+    r = zeros(x)
+    return r
+  end
+
+  r = x/y
+  return y*sqrt(r+1*r)
+end
+
+println(hypot(3,4))
